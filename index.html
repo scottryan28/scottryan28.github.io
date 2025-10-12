@@ -1,64 +1,78 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Scott Ryan | Portfolio & Resume</title>
-  <style>
-    body{margin:0;font-family:system-ui,Arial;background:#f8fafc;color:#111}
-    header{background:#2563eb;color:#fff;padding:2rem 1rem;text-align:center}
-    header h1{margin:0;font-size:2rem}
-    nav a{color:#fff;margin:0 .5rem;text-decoration:none;font-weight:600}
-    main{max-width:900px;margin:2rem auto;padding:0 1rem}
-    section{margin-bottom:2rem}
-    h2{border-bottom:2px solid #2563eb;padding-bottom:.25rem}
-    .card{background:#fff;border-radius:10px;padding:1rem;box-shadow:0 3px 6px rgba(0,0,0,.08)}
-    footer{text-align:center;padding:1rem;color:#555;font-size:.9rem;border-top:1px solid #e5e7eb}
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Scott Ryan</h1>
-    <p>Solution Architect | Phoenix, AZ | <a href="mailto:s.ryan28@me.com" style="color:#fff;">s.ryan28@me.com</a></p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#resume">Resume</a>
-      <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a>
-    </nav>
-  </header>
+---
+layout: default
+title: "Scott Ryan — Portfolio & Resume"
+description: "Scott Ryan — Portfolio and resume. Full‑stack software engineer focused on reliable, maintainable web apps."
+---
 
-  <main>
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p>Hi! I'm Scott, a Solution Architect with over 10 years of experience designing and migrating enterprise applications to the cloud. I love creating efficient, resilient systems and helping teams bring their ideas to life.</p>
-    </section>
+<!-- Panel: About -->
+<section id="panel-about" role="tabpanel" aria-labelledby="tab-about" class="tab-panel">
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>Software engineer focused on building reliable, maintainable web applications. (Replace with your short bio.)</p>
+  </section>
+</section>
 
-    <section id="resume" class="card">
-      <h2>Resume Highlights</h2>
-      <ul>
-        <li>Architected multi-AZ AWS disaster recovery for enterprise apps.</li>
-        <li>Led technical POCs that increased win rate by 30%.</li>
-        <li>10+ years of cloud, DevOps and data-center experience.</li>
-      </ul>
-      <p><a href="Scott-Ryan-Resume.pdf">Download PDF Resume →</a></p>
-    </section>
+<!-- Panel: Resume -->
+<section id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" class="tab-panel" hidden>
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <div id="resume-root" aria-live="polite">
+      <!-- Resume content will be rendered here from assets/data/resume.json -->
+    </div>
+    <p class="resume-actions">
+      <a id="download-json" href="{{ '/assets/data/resume.json' | relative_url }}" download>Download JSON</a>
+      <button id="print-resume" type="button">Print / Save PDF</button>
+    </p>
+  </section>
+</section>
 
-    <section id="projects" class="card">
-      <h2>Featured Projects</h2>
-      <ol>
-        <li><strong>Story Bible App</strong> – Single-pane React tool for authors.</li>
-        <li><strong>AWS Migration Playbook</strong> – Step-by-step DR and cost model.</li>
-      </ol>
-    </section>
+<!-- Panel: Projects -->
+<section id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" class="tab-panel" hidden>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <!-- ...existing code for projects... -->
+  </section>
+</section>
 
-    <section id="blog" class="card">
-      <h2>Latest Post</h2>
-      <p><em>“Building a Proof of Concept that Closes Deals”</em> – coming soon.</p>
-    </section>
-  </main>
+<!-- Panel: Contact -->
+<section id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" class="tab-panel" hidden>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <!-- ...existing contact content... -->
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+  </section>
+</section>
+				<p class="resume-actions">
+					<a id="download-json" href="assets/data/resume.json" download>Download JSON</a>
+					<button id="print-resume" type="button">Print / Save PDF</button>
+				</p>
+			</section>
+		</section>
 
-  <footer>© <span id="year"></span> Scott Ryan — Hosted on GitHub Pages</footer>
-  <script>document.getElementById("year").textContent=new Date().getFullYear()</script>
+		<!-- Panel: Projects -->
+		<section id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" class="tab-panel" hidden>
+			<section id="projects" class="section">
+				<h2>Projects</h2>
+				<!-- ...existing code for projects... -->
+			</section>
+		</section>
+
+		<!-- Panel: Contact -->
+		<section id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" class="tab-panel" hidden>
+			<section id="contact" class="section">
+				<h2>Contact</h2>
+				<!-- ...existing contact content... -->
+				<p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+			</section>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<small>© Scott Ryan — Built with care.</small>
+		</div>
+	</footer>
+
+	<script src="assets/js/resume.js" defer></script>
 </body>
 </html>
