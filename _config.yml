@@ -2,7 +2,7 @@ title: "Scott Ryan"
 email: "s.ryan28@me.com"
 description: "Solution Architect — Portfolio & resume"
 baseurl: "" # set to "/repo-name" if publishing to project pages
-url: "https://<your-username>.github.io" # replace with your site URL
-theme: minima
+url: "https://scottryan.org"
+theme: null
 markdown: kramdown
 permalink: /:path/
