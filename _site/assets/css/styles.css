@@ -84,3 +84,15 @@ body{
   .container{padding:0}
   #resume-root{border:none;background:transparent}
 }
+
+/* Content Lab (Content Tool) styles */
+.content-tool{display:grid;gap:0.5rem;grid-template-columns:1fr}
+.content-tool label{font-size:0.9rem;color:var(--muted)}
+.content-tool select,.content-tool input{padding:0.6rem;border-radius:6px;border:1px solid #eef2f7}
+.tool-actions{display:flex;gap:0.5rem;margin-top:0.5rem}
+.content-output{margin-top:1rem;padding:0.75rem;background:#fbfdff;border-radius:6px;color:var(--accent);min-height:3rem}
+
+@media (min-width:640px){
+  .content-tool{grid-template-columns:1fr 1fr;align-items:center}
+  .tool-actions{grid-column:1/-1}
+}
