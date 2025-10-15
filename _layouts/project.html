@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<article class="section">
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" style="max-width:100%;border-radius:8px;margin-top:0.5rem" />
+    {% endif %}
+  </header>
+
+  <div class="project-body">
+    {{ content }}
+  </div>
+
+  {% if page.lat and page.lng %}
+    <div id="project-location" style="height:240px;margin-top:1rem;border-radius:8px;border:1px solid #eef2f7"></div>
+    <script defer>
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!window.L) return;
+      const map = L.map('project-location').setView([{{ page.lat }}, {{ page.lng }}], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+      L.marker([{{ page.lat }}, {{ page.lng }}]).addTo(map).bindPopup('{{ page.title }}');
+    });
+    </script>
+  {% endif %}
+</article>

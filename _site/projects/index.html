@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Projects — hiking, mining, cloud storage, RV, writing, and more">
+  <title>Projects</title>
+  <!-- Fonts: Inter for UI, Merriweather for headings (small, web-safe stack fallback) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Open Graph / Social preview -->
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Projects — hiking, mining, cloud storage, RV, writing, and more">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000">
+</head>
+<body>
+  <a class="skip-link" href="#main-content" style="position:absolute;left:-999px;top:auto;overflow:hidden;">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Scott Ryan</h1>
+
+      <!-- Tabbed navigation -->
+      <div class="tabs" role="tablist" aria-label="Main">
+        <button role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" data-tab="about" class="tab">About</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-resume" id="tab-resume" data-tab="resume" class="tab">Resume</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" data-tab="projects" class="tab">Projects</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" data-tab="contact" class="tab">Contact</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero small">
+  <div class="container">
+    <h2>Projects</h2>
+    <p class="meta">A collection of personal projects and interests grouped by category.</p>
+  </div>
+</section>
+
+<section class="section container">
+  <h3>Categories</h3>
+  <div class="projects-grid">
+    
+      <a class="project-card" href="/projects/cloud-storage/" aria-label="Cloud Storage">
+        
+          <img src="/assets/images/71p6cIsVUwL._SL1080_.jpg" alt="Cloud Storage" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
+        
+        <strong>Cloud Storage</strong>
+        <span><p>Experiments with personal storage and backup strategies.</p>
+</span>
+      </a>
+    
+      <a class="project-card" href="/projects/hiking/" aria-label="Hiking">
+        
+          <img src="/assets/images/Lost-Dutchman-full.jpg" alt="Hiking" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
+        
+        <strong>Hiking</strong>
+        <span><p>Trail logs, GPX tracks, and notes from favorite hikes.</p>
+</span>
+      </a>
+    
+      <a class="project-card" href="/projects/mining/" aria-label="Mining">
+        
+          <img src="/assets/images/gold1a.jpg" alt="Mining" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
+        
+        <strong>Mining</strong>
+        <span><p>Prospecting notes and finds; small field reports and photos.</p>
+</span>
+      </a>
+    
+  </div>
+
+  <h3 id="map">Map</h3>
+  <div id="projects-map" style="height:360px;border-radius:8px;border:1px solid #e6eefb"></div>
+</section>
+
+<!-- Leaflet (CDN) - lightweight and GitHub Pages friendly -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-FakeHashForExample" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer integrity="sha384-FakeHashForExample" crossorigin=""></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.L) return;
+  const map = L.map('projects-map').setView([45, -120], 5);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  // Load project data from JSON block and add markers
+  try {
+    const raw = document.getElementById('projects-data');
+    const projects = raw ? JSON.parse(raw.textContent || '[]') : [];
+    projects.forEach(p => {
+      if (p.lat != null && p.lng != null) {
+        L.marker([p.lat, p.lng]).addTo(map).bindPopup(`<strong>${p.title}</strong><br>${p.excerpt}`);
+      }
+    });
+  } catch (err) {
+    console.error('Failed to load projects JSON for map markers', err);
+  }
+});
+</script>
+
+<!-- Project data for client-side scripts (rendered as JSON to avoid Liquid inside JS expressions) -->
+<script id="projects-data" type="application/json">
+[
+
+  {
+    "title": "Cloud Storage",
+    "url": "/projects/cloud-storage/",
+    "lat": null,
+    "lng": null,
+    "excerpt": "Experiments with personal storage and backup strategies.",
+    "image": "/assets/images/71p6cIsVUwL._SL1080_.jpg"
+  },
+
+  {
+    "title": "Hiking",
+    "url": "/projects/hiking/",
+    "lat": 33.4469,
+    "lng": -111.5795,
+    "excerpt": "Trail logs, GPX tracks, and notes from favorite hikes.",
+    "image": "/assets/images/Lost-Dutchman-full.jpg"
+  },
+
+  {
+    "title": "Mining",
+    "url": "/projects/mining/",
+    "lat": 46.0,
+    "lng": -120.5,
+    "excerpt": "Prospecting notes and finds; small field reports and photos.",
+    "image": "/assets/images/gold1a.jpg"
+  }
+
+]
+</script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Scott Ryan — Built with care.</small>
+    </div>
+  </footer>
+
+  <script src="/assets/js/resume.js" defer></script>
+  <script src="/assets/js/content-tool.js" defer></script>
+</body>
+</html>

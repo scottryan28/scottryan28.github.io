@@ -1,0 +1,19 @@
+projects:
+  - title: "Hiking"
+    category: "outdoors"
+    description: "Trail logs, GPX tracks, and maps for favorite hikes."
+    lat: 45.5
+    lng: -121.7
+    image: "/assets/images/Lost-Dutchman-full.jpg"
+
+  - title: "Mining"
+    category: "field"
+    description: "Prospecting notes and finds."
+    lat: 46.0
+    lng: -120.5
+    image: "/assets/images/gold1a.jpg"
+
+  - title: "Cloud Storage"
+    category: "tech"
+    description: "Personal experiments with redundant storage and backups."
+    image: "/assets/images/71p6cIsVUwL._SL1080_.jpg"

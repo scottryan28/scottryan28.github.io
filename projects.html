@@ -1,0 +1,72 @@
+---
+layout: default
+title: Projects
+description: Projects — hiking, mining, cloud storage, RV, writing, and more
+---
+
+<section class="hero small">
+  <div class="container">
+    <h2>Projects</h2>
+    <p class="meta">A collection of personal projects and interests grouped by category.</p>
+  </div>
+</section>
+
+<section class="section container">
+  <h3>Categories</h3>
+  <div class="projects-grid">
+    {% for p in site.projects %}
+      <a class="project-card" href="{{ p.url | relative_url }}" aria-label="{{ p.title }}">
+        {% if p.image %}
+          <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
+        {% endif %}
+        <strong>{{ p.title }}</strong>
+        <span>{{ p.excerpt | default: p.description }}</span>
+      </a>
+    {% endfor %}
+  </div>
+
+  <h3 id="map">Map</h3>
+  <div id="projects-map" style="height:360px;border-radius:8px;border:1px solid #e6eefb"></div>
+</section>
+
+<!-- Leaflet (CDN) - lightweight and GitHub Pages friendly -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-FakeHashForExample" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer integrity="sha384-FakeHashForExample" crossorigin=""></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.L) return;
+  const map = L.map('projects-map').setView([45, -120], 5);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  // Load project data from JSON block and add markers
+  try {
+    const raw = document.getElementById('projects-data');
+    const projects = raw ? JSON.parse(raw.textContent || '[]') : [];
+    projects.forEach(p => {
+      if (p.lat != null && p.lng != null) {
+        L.marker([p.lat, p.lng]).addTo(map).bindPopup(`<strong>${p.title}</strong><br>${p.excerpt}`);
+      }
+    });
+  } catch (err) {
+    console.error('Failed to load projects JSON for map markers', err);
+  }
+});
+</script>
+
+<!-- Project data for client-side scripts (rendered as JSON to avoid Liquid inside JS expressions) -->
+<script id="projects-data" type="application/json">
+[
+{% for p in site.projects %}
+  {
+    "title": "{{ p.title | escape }}",
+    "url": "{{ p.url | relative_url }}",
+    "lat": {% if p.lat %}{{ p.lat }}{% else %}null{% endif %},
+    "lng": {% if p.lng %}{{ p.lng }}{% else %}null{% endif %},
+    "excerpt": "{{ p.excerpt | default: p.content | strip_html | strip_newlines | truncate:120 | escape }}",
+    "image": "{{ p.image | relative_url }}"
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
+</script>

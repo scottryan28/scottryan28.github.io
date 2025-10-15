@@ -1,8 +1,57 @@
+# ─────────────────────────────
+# Site Settings
+# ─────────────────────────────
 title: "Scott Ryan"
 email: "s.ryan28@me.com"
-description: "Solution Architect — Portfolio & resume"
-baseurl: "" # set to "/repo-name" if publishing to project pages
+description: "Solution Architect — Portfolio & Resume"
+baseurl: "" # For project pages, use: "/repo-name"
 url: "https://scottryan.org"
-theme: null
+lang: "en-US"
+
+# ─────────────────────────────
+# Build Settings
+# ─────────────────────────────
 markdown: kramdown
 permalink: /:path/
+theme: minima # replace null with minima if you’re using it
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ─────────────────────────────
+# Kramdown Options (Markdown Rendering)
+# ─────────────────────────────
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# ─────────────────────────────
+# Collections
+# ─────────────────────────────
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# ─────────────────────────────
+# Defaults
+# ─────────────────────────────
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      author: "Scott Ryan"
+
+# ─────────────────────────────
+# SEO / Social
+# ─────────────────────────────
+social:
+  name: "Scott Ryan"
+  links:
+    - "https://github.com/scottryan28"
+    - "https://www.linkedin.com/in/scott-ryan/"
+timezone: "America/Los_Angeles"
