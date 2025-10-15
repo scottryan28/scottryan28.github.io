@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Solution Architect — Portfolio & Resume">
-  <title>Cloud Storage</title>
+  <title>The SRyter</title>
   <!-- Optimized font loading strategy -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,18 +18,18 @@
   <!-- Enhanced SEO & Social Meta Tags -->
   <meta name="author" content="Scott Ryan">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="http://localhost:4000/projects/cloud-storage/">
+  <link rel="canonical" href="http://localhost:4000/projects/sryter/">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Cloud Storage">
+  <meta property="og:title" content="The SRyter">
   <meta property="og:description" content="Solution Architect — Portfolio & Resume">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/projects/cloud-storage/">
+  <meta property="og:url" content="http://localhost:4000/projects/sryter/">
   <meta property="og:locale" content="en_US">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Cloud Storage">
+  <meta name="twitter:title" content="The SRyter">
   <meta name="twitter:description" content="Solution Architect — Portfolio & Resume">
   
   <!-- JSON-LD -->
@@ -63,17 +63,37 @@
   <main id="main-content" class="container">
     <article class="section">
   <header>
-    <h1>Cloud Storage</h1>
+    <h1>The SRyter</h1>
     
-      <img src="/assets/images/71p6cIsVUwL._SL1080_.jpg" alt="Cloud Storage" style="max-width:100%;border-radius:8px;margin-top:0.5rem" />
+      <img src="/assets/images/vickone.jpg" alt="The SRyter" style="max-width:100%;border-radius:8px;margin-top:0.5rem" />
     
   </header>
 
   <div class="project-body">
-    <p>Experiments with personal storage and backup strategies.</p>
+    <p>An experimental story-bible and novel generator built with Gradio and lightweight versioning. The SRyter helps writers prototype characters, plot beats, and worldbuilding using seeded prompts and simple export options.</p>
+
+<p>Features:</p>
+
+<ul>
+  <li>Character templates and relationship graphs</li>
+  <li>Plot scaffold generation (acts, beats, scenes)</li>
+  <li>Autosave and export to JSON/Markdown</li>
+</ul>
+
+<p>A short preview: The SRyter is designed for writers who want a focused, iterative space to sketch scenes and characters, then export structured notes for revision.</p>
 
   </div>
 
+  
+    <div id="project-location" style="height:240px;margin-top:1rem;border-radius:8px;border:1px solid #eef2f7"></div>
+    <script defer>
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!window.L) return;
+      const map = L.map('project-location').setView([0, 0], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+      L.marker([0, 0]).addTo(map).bindPopup('The SRyter');
+    });
+    </script>
   
 </article>
 

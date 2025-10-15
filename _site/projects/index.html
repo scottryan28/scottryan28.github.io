@@ -5,17 +5,43 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Projects — hiking, mining, cloud storage, RV, writing, and more">
   <title>Projects</title>
-  <!-- Fonts: Inter for UI, Merriweather for headings (small, web-safe stack fallback) -->
+  <!-- Optimized font loading strategy -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap">
+  </noscript>
   <link rel="stylesheet" href="/assets/css/styles.css">
 
-  <!-- Open Graph / Social preview -->
+  <!-- Enhanced SEO & Social Meta Tags -->
+  <meta name="author" content="Scott Ryan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/projects/">
+  
+  <!-- Open Graph -->
   <meta property="og:title" content="Projects">
   <meta property="og:description" content="Projects — hiking, mining, cloud storage, RV, writing, and more">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:url" content="http://localhost:4000/projects/">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Projects">
+  <meta name="twitter:description" content="Projects — hiking, mining, cloud storage, RV, writing, and more">
+  
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Scott Ryan",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://github.com/scottryan28","https://www.linkedin.com/in/scott-ryan/"]
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content" style="position:absolute;left:-999px;top:auto;overflow:hidden;">Skip to content</a>
@@ -25,12 +51,12 @@
       <h1 class="site-title">Scott Ryan</h1>
 
       <!-- Tabbed navigation -->
-      <div class="tabs" role="tablist" aria-label="Main">
-        <button role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" data-tab="about" class="tab">About</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-resume" id="tab-resume" data-tab="resume" class="tab">Resume</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" data-tab="projects" class="tab">Projects</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" data-tab="contact" class="tab">Contact</button>
-      </div>
+      <nav class="tabs" role="tablist" aria-label="Main navigation">
+        <button role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" class="tab">About</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-resume" id="tab-resume" class="tab">Resume</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" class="tab">Projects</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" class="tab">Contact</button>
+      </nav>
     </div>
   </header>
 
@@ -46,12 +72,30 @@
   <h3>Categories</h3>
   <div class="projects-grid">
     
+      <a class="project-card" href="/projects/cloud-dr/" aria-label="Cloud Disaster Recovery Framework">
+        
+          <img src="/assets/images/hero.svg" alt="Cloud Disaster Recovery Framework" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
+        
+        <strong>Cloud Disaster Recovery Framework</strong>
+        <span><p>A multi-region AWS disaster recovery framework and reference architecture designed for small-to-medium enterprises. Focuses on low-cost snapshotting, cross-region replication, and automated failover playbooks.</p>
+</span>
+      </a>
+    
       <a class="project-card" href="/projects/cloud-storage/" aria-label="Cloud Storage">
         
           <img src="/assets/images/71p6cIsVUwL._SL1080_.jpg" alt="Cloud Storage" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
         
         <strong>Cloud Storage</strong>
         <span><p>Experiments with personal storage and backup strategies.</p>
+</span>
+      </a>
+    
+      <a class="project-card" href="/projects/hallmark-gen/" aria-label="Vanessa’s Hallmark Generator">
+        
+          <img src="/assets/images/71p6cIsVUwL._SL1080_.jpg" alt="Vanessa’s Hallmark Generator" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
+        
+        <strong>Vanessa’s Hallmark Generator</strong>
+        <span><p>A playful AI-driven script generator that composes short romantic, feel-good scenes in a Hallmark-adjacent style. Built as an experiment in tone transfer and controlled prompts.</p>
 </span>
       </a>
     
@@ -64,12 +108,30 @@
 </span>
       </a>
     
+      <a class="project-card" href="/projects/lost-dutchman/" aria-label="Lost Dutchman: Treasure Hunting & Map Finder">
+        
+          <img src="/assets/images/Lost-Dutchman-full.jpg" alt="Lost Dutchman: Treasure Hunting & Map Finder" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
+        
+        <strong>Lost Dutchman: Treasure Hunting & Map Finder</strong>
+        <span><p>A small map-based tool and repository for locating historical sites, trailheads, and the Lost Dutchman area. Includes GPX overlays, map markers, and a finder utility to help plan visits.</p>
+</span>
+      </a>
+    
       <a class="project-card" href="/projects/mining/" aria-label="Mining">
         
           <img src="/assets/images/gold1a.jpg" alt="Mining" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
         
         <strong>Mining</strong>
         <span><p>Prospecting notes and finds; small field reports and photos.</p>
+</span>
+      </a>
+    
+      <a class="project-card" href="/projects/sryter/" aria-label="The SRyter">
+        
+          <img src="/assets/images/vickone.jpg" alt="The SRyter" loading="lazy" style="width:100%;height:auto;border-radius:8px;margin-bottom:0.5rem;object-fit:cover" />
+        
+        <strong>The SRyter</strong>
+        <span><p>An experimental story-bible and novel generator built with Gradio and lightweight versioning. The SRyter helps writers prototype characters, plot beats, and worldbuilding using seeded prompts and simple export options.</p>
 </span>
       </a>
     
@@ -110,11 +172,29 @@ document.addEventListener('DOMContentLoaded', function(){
 [
 
   {
+    "title": "Cloud Disaster Recovery Framework",
+    "url": "/projects/cloud-dr/",
+    "lat": 0,
+    "lng": 0,
+    "excerpt": "A multi-region AWS disaster recovery framework and reference architecture designed for small-to-medium enterprises. F...",
+    "image": "/assets/images/hero.svg"
+  },
+
+  {
     "title": "Cloud Storage",
     "url": "/projects/cloud-storage/",
     "lat": null,
     "lng": null,
     "excerpt": "Experiments with personal storage and backup strategies.",
+    "image": "/assets/images/71p6cIsVUwL._SL1080_.jpg"
+  },
+
+  {
+    "title": "Vanessa’s Hallmark Generator",
+    "url": "/projects/hallmark-gen/",
+    "lat": 0,
+    "lng": 0,
+    "excerpt": "A playful AI-driven script generator that composes short romantic, feel-good scenes in a Hallmark-adjacent style. Bui...",
     "image": "/assets/images/71p6cIsVUwL._SL1080_.jpg"
   },
 
@@ -128,12 +208,30 @@ document.addEventListener('DOMContentLoaded', function(){
   },
 
   {
+    "title": "Lost Dutchman: Treasure Hunting &amp; Map Finder",
+    "url": "/projects/lost-dutchman/",
+    "lat": 33.4469,
+    "lng": -111.5795,
+    "excerpt": "A small map-based tool and repository for locating historical sites, trailheads, and the Lost Dutchman area. Includes...",
+    "image": "/assets/images/Lost-Dutchman-full.jpg"
+  },
+
+  {
     "title": "Mining",
     "url": "/projects/mining/",
     "lat": 46.0,
     "lng": -120.5,
     "excerpt": "Prospecting notes and finds; small field reports and photos.",
     "image": "/assets/images/gold1a.jpg"
+  },
+
+  {
+    "title": "The SRyter",
+    "url": "/projects/sryter/",
+    "lat": 0,
+    "lng": 0,
+    "excerpt": "An experimental story-bible and novel generator built with Gradio and lightweight versioning. The SRyter helps writer...",
+    "image": "/assets/images/vickone.jpg"
   }
 
 ]
@@ -148,6 +246,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </footer>
 
   <script src="/assets/js/resume.js" defer></script>
-  <script src="/assets/js/content-tool.js" defer></script>
+  <script src="/assets/js/resume.js" defer></script>
+  <script src="/assets/js/tabs.js" defer></script>
 </body>
 </html>

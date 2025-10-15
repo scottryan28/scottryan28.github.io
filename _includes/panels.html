@@ -8,16 +8,15 @@ Keep markup minimal and semantic. Use `{{ '/assets/data/resume.json' | relative_
 
 <!-- About -->
 <section id="panel-about" role="tabpanel" aria-labelledby="tab-about" class="tab-panel">
-  <div id="about" class="section">
-    <h2>About</h2>
-    <p>Software engineer focused on building reliable, maintainable web applications. This personal site showcases a portfolio, resume, and small tools built with a minimalist and elegant aesthetic.</p>
+  <div class="section">
+    <p>Software engineer and solution architect focusing on reliable, maintainable, and human-centered web systems. I build production-ready applications, small creative tools, and data-driven experiences — with attention to accessibility, performance, and clear design.</p>
+    <p>I enjoy blending technical depth (cloud architecture, automation) with creative tooling (writing helpers, maps, and small interactive demos). This site is a curated snapshot of selected work, experiments, and utilities.</p>
   </div>
 </section>
 
 <!-- Resume -->
 <section id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" class="tab-panel" hidden>
-  <div id="resume" class="section">
-    <h2>Resume</h2>
+  <div class="section">
     <div id="resume-root" aria-live="polite">
       <!-- Resume content will be rendered here from assets/data/resume.json -->
     </div>
@@ -30,12 +29,21 @@ Keep markup minimal and semantic. Use `{{ '/assets/data/resume.json' | relative_
 
 <!-- Projects -->
 <section id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" class="tab-panel" hidden>
-  <div id="projects" class="section">
-    <h2>Projects</h2>
-    <p>Featured projects will be displayed here as cards. For now, add project entries to `_data/projects.yml` or directly edit this include.</p>
-    <ul>
-      <li><strong>Project Name</strong> — Short description of the project.</li>
-    </ul>
+  <div class="section">
+    <div class="projects-grid">
+      {% for project in site.data.projects.projects %}
+      <article class="project-card">
+        {% if project.image %}
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" />
+        {% endif %}
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+        {% if project.link %}
+        <a href="{{ project.link }}" class="project-link">View Project</a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
   </div>
 </section>
 

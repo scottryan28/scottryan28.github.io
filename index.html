@@ -1,21 +1,101 @@
 ---
 layout: default
 title: "Scott Ryan - Portfolio & Resume"
-description: "Scott Ryan - Portfolio and resume. Full-stack software engineer focused on reliable, maintainable web apps."
+description: "Scott Ryan - Portfolio and resume. Solution Architect & Systems Engineer with a bit of Field CTO mixed in. Cloud & Storage expert."
 ---
 
 <section class="hero">
-	<div class="container hero-inner">
-		<div class="hero-media">
-			<img src="{{ '/assets/images/hero.svg' | relative_url }}" alt="Scott Ryan banner" />
-		</div>
-		<div class="hero-copy">
-			<h1>Scott Ryan</h1>
-			<p class="lead">Full-stack software engineer — building reliable, maintainable web applications. Explore my resume, projects, and small tools.</p>
-			<p><a class="tab" href="{{ '/projects.html' | relative_url }}">View Projects</a></p>
-		</div>
-	</div>
+  <div class="container hero-inner">
+    <div class="hero-media">
+      <img src="{{ '/assets/images/hero.svg' | relative_url }}" alt="Scott Ryan banner" />
+    </div>
+    <div class="hero-copy">
+      <p class="lead">
+        Solution Architect & Full-Stack Engineer — designing and delivering web experiences that connect technology with people.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Tab Panels -->
+{% include panels.html %}
+      I’m a solution architect and software engineer with a background in full-stack development, cloud architecture, and technical sales engineering.
+      My focus is building systems that are scalable, maintainable, and deeply intuitive — from cloud-native apps to AI-driven storytelling tools.
+    </p>
+    <p>
+      I’ve worked across enterprise, creative, and startup environments — helping teams move faster with frameworks, proof-of-concepts, and automated solutions
+      that bridge business strategy with clean code.
+    </p>
+  </div>
+</section>
+
+<hr />
+
+<section class="skills">
+  <div class="container">
+    <h2>Core Expertise</h2>
+    <ul class="skills-list">
+      <li>🌩 Cloud & Architecture — AWS, Azure, multi-cloud design, disaster recovery</li>
+      <li>⚙️ Full-Stack Development — Python, JavaScript, Gradio, FastAPI, Flask</li>
+      <li>🧠 AI & Automation — LM Studio integrations, natural language tools, story generation</li>
+      <li>🧩 DevOps — GitHub Actions, CI/CD pipelines, containerization</li>
+      <li>🧭 Technical Leadership — Proof-of-concept frameworks, presales enablement, mentoring</li>
+    </ul>
+  </div>
+</section>
+
+<hr />
+
+<section class="highlight">
+  <div class="container">
+    <h2>Featured Work</h2>
+    <div class="project-grid">
+      <article class="project-card">
+        <h3><a href="{{ '/projects/sryter/' | relative_url }}">The SRyter — Story Bible & Novel Generator</a></h3>
+        <p>
+          A Gradio-based creative tool for writers that generates story frameworks, characters, and worldbuilding with version control and autosave.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="{{ '/projects/hallmark-gen/' | relative_url }}">Vanessa’s Hallmark Generator</a></h3>
+        <p>
+          A playful writing engine that crafts romantic, heartwarming Hallmark-style scripts using AI-driven prompts and stylistic blending.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="{{ '/projects/cloud-dr/' | relative_url }}">Cloud Disaster Recovery Framework</a></h3>
+        <p>
+          A multi-region AWS-based DR strategy for zero data loss and rapid recovery — designed for affordability and enterprise scalability.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="{{ '/projects/lost-dutchman/' | relative_url }}">Lost Dutchman — Treasure Hunting & Map Finder</a></h3>
+        <p>
+          A map-first project with GPX overlays, markers, and a finder utility to explore trails and historical points of interest near the Lost Dutchman area.
+        </p>
+      </article>
+    </div>
+    <p><a href="{{ '/projects.html' | relative_url }}">See all projects →</a></p>
+  </div>
+</section>
+
+<hr />
+
+<section class="contact">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>
+      Always open to interesting projects, creative collaborations, or simply talking shop about AI tools, architecture, and writing systems.
+    </p>
+    <p>
+      <a href="mailto:s.ryan28@me.com" class="tab">Email Me</a> 
+      <a href="https://www.linkedin.com/in/scott-ryan/" class="tab" target="_blank">LinkedIn</a> 
+      <a href="https://github.com/scottryan28" class="tab" target="_blank">GitHub</a>
+    </p>
+  </div>
 </section>
 
 {% include panels.html %}
-

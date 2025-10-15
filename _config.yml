@@ -13,11 +13,27 @@ lang: "en-US"
 # ─────────────────────────────
 markdown: kramdown
 permalink: /:path/
-theme: minima # replace null with minima if you’re using it
+theme: null  # Using custom theme
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-minifier  # Add minification
+
+# Production Optimization
+sass:
+  style: compressed
+  sourcemap: never
+
+# Asset Optimization
+jekyll-minifier:
+  compress_css: true
+  compress_javascript: true
+  compress_json: true
+  exclude:
+    - "assets/data/*.json"  # Exclude resume.json from minification
+  uglifier_args:
+    harmony: true
 
 # ─────────────────────────────
 # Kramdown Options (Markdown Rendering)

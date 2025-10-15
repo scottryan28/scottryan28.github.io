@@ -3,19 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Scott Ryan - Portfolio and resume. Full-stack software engineer focused on reliable, maintainable web apps.">
+  <meta name="description" content="Scott Ryan - Portfolio and resume. Solution Architect & Systems Engineer with a bit of Field CTO mixed in. Cloud & Storage expert.">
   <title>Scott Ryan - Portfolio & Resume</title>
-  <!-- Fonts: Inter for UI, Merriweather for headings (small, web-safe stack fallback) -->
+  <!-- Optimized font loading strategy -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap">
+  </noscript>
   <link rel="stylesheet" href="/assets/css/styles.css">
 
-  <!-- Open Graph / Social preview -->
+  <!-- Enhanced SEO & Social Meta Tags -->
+  <meta name="author" content="Scott Ryan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/">
+  
+  <!-- Open Graph -->
   <meta property="og:title" content="Scott Ryan - Portfolio & Resume">
-  <meta property="og:description" content="Scott Ryan - Portfolio and resume. Full-stack software engineer focused on reliable, maintainable web apps.">
+  <meta property="og:description" content="Scott Ryan - Portfolio and resume. Solution Architect & Systems Engineer with a bit of Field CTO mixed in. Cloud & Storage expert.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:url" content="http://localhost:4000/">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scott Ryan - Portfolio & Resume">
+  <meta name="twitter:description" content="Scott Ryan - Portfolio and resume. Solution Architect & Systems Engineer with a bit of Field CTO mixed in. Cloud & Storage expert.">
+  
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Scott Ryan",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://github.com/scottryan28","https://www.linkedin.com/in/scott-ryan/"]
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content" style="position:absolute;left:-999px;top:auto;overflow:hidden;">Skip to content</a>
@@ -25,41 +51,41 @@
       <h1 class="site-title">Scott Ryan</h1>
 
       <!-- Tabbed navigation -->
-      <div class="tabs" role="tablist" aria-label="Main">
-        <button role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" data-tab="about" class="tab">About</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-resume" id="tab-resume" data-tab="resume" class="tab">Resume</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" data-tab="projects" class="tab">Projects</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" data-tab="contact" class="tab">Contact</button>
-      </div>
+      <nav class="tabs" role="tablist" aria-label="Main navigation">
+        <button role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" class="tab">About</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-resume" id="tab-resume" class="tab">Resume</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" class="tab">Projects</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" class="tab">Contact</button>
+      </nav>
     </div>
   </header>
 
   <main id="main-content" class="container">
     <section class="hero">
-	<div class="container hero-inner">
-		<div class="hero-media">
-			<img src="/assets/images/hero.svg" alt="Scott Ryan banner" />
-		</div>
-		<div class="hero-copy">
-			<h1>Scott Ryan</h1>
-			<p class="lead">Full-stack software engineer — building reliable, maintainable web applications. Explore my resume, projects, and small tools.</p>
-			<p><a class="tab" href="/projects.html">View Projects</a></p>
-		</div>
-	</div>
+  <div class="container hero-inner">
+    <div class="hero-media">
+      <img src="/assets/images/hero.svg" alt="Scott Ryan banner" />
+    </div>
+    <div class="hero-copy">
+      <p class="lead">
+        Solution Architect & Full-Stack Engineer — designing and delivering web experiences that connect technology with people.
+      </p>
+    </div>
+  </div>
 </section>
 
+<!-- Tab Panels -->
 <!-- About -->
 <section id="panel-about" role="tabpanel" aria-labelledby="tab-about" class="tab-panel">
-  <div id="about" class="section">
-    <h2>About</h2>
-    <p>Software engineer focused on building reliable, maintainable web applications. This personal site showcases a portfolio, resume, and small tools built with a minimalist and elegant aesthetic.</p>
+  <div class="section">
+    <p>Software engineer and solution architect focusing on reliable, maintainable, and human-centered web systems. I build production-ready applications, small creative tools, and data-driven experiences — with attention to accessibility, performance, and clear design.</p>
+    <p>I enjoy blending technical depth (cloud architecture, automation) with creative tooling (writing helpers, maps, and small interactive demos). This site is a curated snapshot of selected work, experiments, and utilities.</p>
   </div>
 </section>
 
 <!-- Resume -->
 <section id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" class="tab-panel" hidden>
-  <div id="resume" class="section">
-    <h2>Resume</h2>
+  <div class="section">
     <div id="resume-root" aria-live="polite">
       <!-- Resume content will be rendered here from assets/data/resume.json -->
     </div>
@@ -72,12 +98,37 @@
 
 <!-- Projects -->
 <section id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" class="tab-panel" hidden>
-  <div id="projects" class="section">
-    <h2>Projects</h2>
-    <p>Featured projects will be displayed here as cards. For now, add project entries to `_data/projects.yml` or directly edit this include.</p>
-    <ul>
-      <li><strong>Project Name</strong> — Short description of the project.</li>
-    </ul>
+  <div class="section">
+    <div class="projects-grid">
+      
+      <article class="project-card">
+        
+        <img src="/assets/images/Lost-Dutchman-full.jpg" alt="Hiking" />
+        
+        <h3>Hiking</h3>
+        <p>Trail logs, GPX tracks, and maps for favorite hikes.</p>
+        
+      </article>
+      
+      <article class="project-card">
+        
+        <img src="/assets/images/gold1a.jpg" alt="Mining" />
+        
+        <h3>Mining</h3>
+        <p>Prospecting notes and finds.</p>
+        
+      </article>
+      
+      <article class="project-card">
+        
+        <img src="/assets/images/71p6cIsVUwL._SL1080_.jpg" alt="Cloud Storage" />
+        
+        <h3>Cloud Storage</h3>
+        <p>Personal experiments with redundant storage and backups.</p>
+        
+      </article>
+      
+    </div>
   </div>
 </section>
 
@@ -123,7 +174,183 @@
   </div>
 </section>
 
+      I’m a solution architect and software engineer with a background in full-stack development, cloud architecture, and technical sales engineering.
+      My focus is building systems that are scalable, maintainable, and deeply intuitive — from cloud-native apps to AI-driven storytelling tools.
+    </p>
+    <p>
+      I’ve worked across enterprise, creative, and startup environments — helping teams move faster with frameworks, proof-of-concepts, and automated solutions
+      that bridge business strategy with clean code.
+    </p>
+  </div>
+</section>
 
+<hr />
+
+<section class="skills">
+  <div class="container">
+    <h2>Core Expertise</h2>
+    <ul class="skills-list">
+      <li>🌩 Cloud & Architecture — AWS, Azure, multi-cloud design, disaster recovery</li>
+      <li>⚙️ Full-Stack Development — Python, JavaScript, Gradio, FastAPI, Flask</li>
+      <li>🧠 AI & Automation — LM Studio integrations, natural language tools, story generation</li>
+      <li>🧩 DevOps — GitHub Actions, CI/CD pipelines, containerization</li>
+      <li>🧭 Technical Leadership — Proof-of-concept frameworks, presales enablement, mentoring</li>
+    </ul>
+  </div>
+</section>
+
+<hr />
+
+<section class="highlight">
+  <div class="container">
+    <h2>Featured Work</h2>
+    <div class="project-grid">
+      <article class="project-card">
+        <h3><a href="/projects/sryter/">The SRyter — Story Bible & Novel Generator</a></h3>
+        <p>
+          A Gradio-based creative tool for writers that generates story frameworks, characters, and worldbuilding with version control and autosave.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="/projects/hallmark-gen/">Vanessa’s Hallmark Generator</a></h3>
+        <p>
+          A playful writing engine that crafts romantic, heartwarming Hallmark-style scripts using AI-driven prompts and stylistic blending.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="/projects/cloud-dr/">Cloud Disaster Recovery Framework</a></h3>
+        <p>
+          A multi-region AWS-based DR strategy for zero data loss and rapid recovery — designed for affordability and enterprise scalability.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="/projects/lost-dutchman/">Lost Dutchman — Treasure Hunting & Map Finder</a></h3>
+        <p>
+          A map-first project with GPX overlays, markers, and a finder utility to explore trails and historical points of interest near the Lost Dutchman area.
+        </p>
+      </article>
+    </div>
+    <p><a href="/projects.html">See all projects →</a></p>
+  </div>
+</section>
+
+<hr />
+
+<section class="contact">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>
+      Always open to interesting projects, creative collaborations, or simply talking shop about AI tools, architecture, and writing systems.
+    </p>
+    <p>
+      <a href="mailto:s.ryan28@me.com" class="tab">Email Me</a> 
+      <a href="https://www.linkedin.com/in/scott-ryan/" class="tab" target="_blank">LinkedIn</a> 
+      <a href="https://github.com/scottryan28" class="tab" target="_blank">GitHub</a>
+    </p>
+  </div>
+</section>
+
+<!-- About -->
+<section id="panel-about" role="tabpanel" aria-labelledby="tab-about" class="tab-panel">
+  <div class="section">
+    <p>Software engineer and solution architect focusing on reliable, maintainable, and human-centered web systems. I build production-ready applications, small creative tools, and data-driven experiences — with attention to accessibility, performance, and clear design.</p>
+    <p>I enjoy blending technical depth (cloud architecture, automation) with creative tooling (writing helpers, maps, and small interactive demos). This site is a curated snapshot of selected work, experiments, and utilities.</p>
+  </div>
+</section>
+
+<!-- Resume -->
+<section id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" class="tab-panel" hidden>
+  <div class="section">
+    <div id="resume-root" aria-live="polite">
+      <!-- Resume content will be rendered here from assets/data/resume.json -->
+    </div>
+    <p class="resume-actions">
+      <a id="download-json" href="/assets/data/resume.json" download>Download JSON</a>
+      <button id="print-resume" type="button">Print / Save PDF</button>
+    </p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" class="tab-panel" hidden>
+  <div class="section">
+    <div class="projects-grid">
+      
+      <article class="project-card">
+        
+        <img src="/assets/images/Lost-Dutchman-full.jpg" alt="Hiking" />
+        
+        <h3>Hiking</h3>
+        <p>Trail logs, GPX tracks, and maps for favorite hikes.</p>
+        
+      </article>
+      
+      <article class="project-card">
+        
+        <img src="/assets/images/gold1a.jpg" alt="Mining" />
+        
+        <h3>Mining</h3>
+        <p>Prospecting notes and finds.</p>
+        
+      </article>
+      
+      <article class="project-card">
+        
+        <img src="/assets/images/71p6cIsVUwL._SL1080_.jpg" alt="Cloud Storage" />
+        
+        <h3>Cloud Storage</h3>
+        <p>Personal experiments with redundant storage and backups.</p>
+        
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Content Lab: lightweight client-side content generator -->
+<section id="panel-content-lab" role="tabpanel" aria-labelledby="tab-content-lab" class="tab-panel" hidden>
+  <div id="content-lab" class="section">
+    <h2>Content Lab</h2>
+    <p class="meta">Small, offline-first content generator for drafting bios, project blurbs, and blog intros.</p>
+
+    <form id="content-tool-form" class="content-tool" onsubmit="return false;">
+      <label for="content-type">Type</label>
+      <select id="content-type" name="type">
+        <option value="bio">Short Bio</option>
+        <option value="project">Project Blurb</option>
+        <option value="blog">Blog Intro</option>
+      </select>
+
+      <label for="content-tone">Tone</label>
+      <select id="content-tone" name="tone">
+        <option value="professional">Professional</option>
+        <option value="friendly">Friendly</option>
+        <option value="concise">Concise</option>
+      </select>
+
+      <label for="content-keywords">Keywords (comma-separated)</label>
+      <input id="content-keywords" name="keywords" type="text" placeholder="e.g. accessibility, performance" />
+
+      <div class="tool-actions">
+        <button id="generate-content" class="tab" type="button">Generate</button>
+        <button id="download-content" class="tab" type="button">Download</button>
+      </div>
+    </form>
+
+    <div id="content-tool-output" class="content-output" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" class="tab-panel" hidden>
+  <div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:s.ryan28@me.com">s.ryan28@me.com</a></p>
+  </div>
+</section>
 
   </main>
 
@@ -134,6 +361,7 @@
   </footer>
 
   <script src="/assets/js/resume.js" defer></script>
-  <script src="/assets/js/content-tool.js" defer></script>
+  <script src="/assets/js/resume.js" defer></script>
+  <script src="/assets/js/tabs.js" defer></script>
 </body>
 </html>

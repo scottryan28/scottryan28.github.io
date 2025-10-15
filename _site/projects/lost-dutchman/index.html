@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Solution Architect — Portfolio & Resume">
-  <title>Cloud Storage</title>
+  <title>Lost Dutchman: Treasure Hunting & Map Finder</title>
   <!-- Optimized font loading strategy -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,18 +18,18 @@
   <!-- Enhanced SEO & Social Meta Tags -->
   <meta name="author" content="Scott Ryan">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="http://localhost:4000/projects/cloud-storage/">
+  <link rel="canonical" href="http://localhost:4000/projects/lost-dutchman/">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Cloud Storage">
+  <meta property="og:title" content="Lost Dutchman: Treasure Hunting & Map Finder">
   <meta property="og:description" content="Solution Architect — Portfolio & Resume">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/projects/cloud-storage/">
+  <meta property="og:url" content="http://localhost:4000/projects/lost-dutchman/">
   <meta property="og:locale" content="en_US">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Cloud Storage">
+  <meta name="twitter:title" content="Lost Dutchman: Treasure Hunting & Map Finder">
   <meta name="twitter:description" content="Solution Architect — Portfolio & Resume">
   
   <!-- JSON-LD -->
@@ -63,17 +63,35 @@
   <main id="main-content" class="container">
     <article class="section">
   <header>
-    <h1>Cloud Storage</h1>
+    <h1>Lost Dutchman: Treasure Hunting & Map Finder</h1>
     
-      <img src="/assets/images/71p6cIsVUwL._SL1080_.jpg" alt="Cloud Storage" style="max-width:100%;border-radius:8px;margin-top:0.5rem" />
+      <img src="/assets/images/Lost-Dutchman-full.jpg" alt="Lost Dutchman: Treasure Hunting & Map Finder" style="max-width:100%;border-radius:8px;margin-top:0.5rem" />
     
   </header>
 
   <div class="project-body">
-    <p>Experiments with personal storage and backup strategies.</p>
+    <p>A small map-based tool and repository for locating historical sites, trailheads, and the Lost Dutchman area. Includes GPX overlays, map markers, and a finder utility to help plan visits.</p>
+
+<p>Includes:</p>
+
+<ul>
+  <li>Interactive map with markers and GPX imports</li>
+  <li>Notes and photo gallery from the trail</li>
+  <li>Open-source repo with data and map scripts</li>
+</ul>
 
   </div>
 
+  
+    <div id="project-location" style="height:240px;margin-top:1rem;border-radius:8px;border:1px solid #eef2f7"></div>
+    <script defer>
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!window.L) return;
+      const map = L.map('project-location').setView([33.4469, -111.5795], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+      L.marker([33.4469, -111.5795]).addTo(map).bindPopup('Lost Dutchman: Treasure Hunting & Map Finder');
+    });
+    </script>
   
 </article>
 

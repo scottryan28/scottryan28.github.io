@@ -5,17 +5,43 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Solution Architect — Portfolio & Resume">
   <title>Mining</title>
-  <!-- Fonts: Inter for UI, Merriweather for headings (small, web-safe stack fallback) -->
+  <!-- Optimized font loading strategy -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap&display=swap">
+  </noscript>
   <link rel="stylesheet" href="/assets/css/styles.css">
 
-  <!-- Open Graph / Social preview -->
+  <!-- Enhanced SEO & Social Meta Tags -->
+  <meta name="author" content="Scott Ryan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/projects/mining/">
+  
+  <!-- Open Graph -->
   <meta property="og:title" content="Mining">
   <meta property="og:description" content="Solution Architect — Portfolio & Resume">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:url" content="http://localhost:4000/projects/mining/">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mining">
+  <meta name="twitter:description" content="Solution Architect — Portfolio & Resume">
+  
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Scott Ryan",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://github.com/scottryan28","https://www.linkedin.com/in/scott-ryan/"]
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content" style="position:absolute;left:-999px;top:auto;overflow:hidden;">Skip to content</a>
@@ -25,12 +51,12 @@
       <h1 class="site-title">Scott Ryan</h1>
 
       <!-- Tabbed navigation -->
-      <div class="tabs" role="tablist" aria-label="Main">
-        <button role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" data-tab="about" class="tab">About</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-resume" id="tab-resume" data-tab="resume" class="tab">Resume</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" data-tab="projects" class="tab">Projects</button>
-        <button role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" data-tab="contact" class="tab">Contact</button>
-      </div>
+      <nav class="tabs" role="tablist" aria-label="Main navigation">
+        <button role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" class="tab">About</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-resume" id="tab-resume" class="tab">Resume</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" class="tab">Projects</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" class="tab">Contact</button>
+      </nav>
     </div>
   </header>
 
@@ -70,6 +96,7 @@
   </footer>
 
   <script src="/assets/js/resume.js" defer></script>
-  <script src="/assets/js/content-tool.js" defer></script>
+  <script src="/assets/js/resume.js" defer></script>
+  <script src="/assets/js/tabs.js" defer></script>
 </body>
 </html>
