@@ -1,0 +1,149 @@
+/* Resume Styles */
+.resume-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.resume-header h1 {
+  margin: 0;
+  color: var(--accent);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.resume-header .meta {
+  color: var(--accent);
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.resume-header .contact {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.resume-header .contact a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.resume-header .contact a:hover {
+  text-decoration: underline;
+}
+
+.resume section {
+  margin-bottom: 2rem;
+}
+
+.resume h3 {
+  color: var(--accent);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.resume-item {
+  margin-bottom: 1.5rem;
+}
+
+.resume-heading {
+  margin-bottom: 0.75rem;
+}
+
+.resume-heading .role {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.resume-heading .meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.resume ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.resume li {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  line-height: 1.5;
+}
+
+.resume .summary p {
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.resume .skills h4 {
+  color: var(--accent);
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.skill-group {
+  margin-bottom: 1.5rem;
+}
+
+.resume-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.resume-actions button,
+.resume-actions a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--brand);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.resume-actions button:hover,
+.resume-actions a:hover {
+  background: #1d4ed8;
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  .resume-header {
+    border-bottom-color: #000;
+  }
+
+  .resume-actions {
+    display: none;
+  }
+
+  .tab,
+  .site-header,
+  .site-footer {
+    display: none !important;
+  }
+
+  .resume section {
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

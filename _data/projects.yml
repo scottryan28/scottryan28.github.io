@@ -1,19 +1,48 @@
 projects:
-  - title: "Hiking"
-    category: "outdoors"
-    description: "Trail logs, GPX tracks, and maps for favorite hikes."
-    lat: 45.5
-    lng: -121.7
+  - title: "Lost Dutchman Research"
+    category: "history"
+    description: "Exploring the legendary Lost Dutchman Mine in Arizona's Superstition Mountains. Historical accounts, geological surveys, and modern expeditions."
+    lat: 33.4592
+    lng: -111.4669
     image: "/assets/images/Lost-Dutchman-full.jpg"
+    tags: ["arizona-history", "hiking", "research"]
 
-  - title: "Mining"
-    category: "field"
-    description: "Prospecting notes and finds."
-    lat: 46.0
-    lng: -120.5
+  - title: "Superstition Wilderness"
+    category: "outdoors"
+    description: "Documenting trails and natural wonders in the Superstition Wilderness Area. Trail guides, seasonal conditions, and conservation notes."
+    lat: 33.4647
+    lng: -111.4938
+    image: "/assets/images/superstition-trails.jpg"
+    tags: ["hiking", "conservation", "outdoors"]
+
+  - title: "Arizona Heritage"
+    category: "history"
+    description: "Research into Arizona's history, focusing on early settlements, mining communities, and indigenous cultures. Special focus on East Valley region."
+    lat: 33.4151
+    lng: -111.8314
+    image: "/assets/images/az-history.jpg"
+    tags: ["arizona-history", "research"]
+
+  - title: "Fly Fishing Journal"
+    category: "outdoors"
+    description: "Exploring Arizona's fly fishing spots, from mountain streams to desert lakes. Technique guides and conservation efforts."
+    lat: 34.5013
+    lng: -111.3043
     image: "/assets/images/gold1a.jpg"
+    tags: ["fly-fishing", "outdoors", "conservation"]
 
-  - title: "Cloud Storage"
-    category: "tech"
-    description: "Personal experiments with redundant storage and backups."
+  - title: "Sustainable Ranching"
+    category: "agriculture"
+    description: "Sustainable farming and ranching projects in Arizona. Water conservation, traditional methods, and modern sustainable practices."
+    lat: 33.2539
+    lng: -111.6225
     image: "/assets/images/71p6cIsVUwL._SL1080_.jpg"
+    tags: ["farming", "ranching", "sustainability"]
+
+  - title: "Kiwanis & Community"
+    category: "community"
+    description: "Active involvement in Kiwanis International, focusing on youth programs and community development in the East Valley."
+    lat: 33.3528
+    lng: -111.7890
+    image: "/assets/images/kiwanis.jpg"
+    tags: ["volunteering", "community", "youth-programs"]

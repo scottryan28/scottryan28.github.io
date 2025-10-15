@@ -102,13 +102,20 @@ body{
   .tool-actions{grid-column:1/-1}
 }
 
-/* Hero */
-/* full-bleed hero */
-.hero{background:linear-gradient(180deg, rgba(37,99,235,0.06) 0%, rgba(14,165,164,0.03) 100%);margin:0 -1.25rem 1.25rem;padding:2rem 1.25rem;border-radius:12px}
-.hero .hero-inner{display:flex;gap:2rem;align-items:center;max-width:var(--max-width);margin:0 auto}
-.hero-media img{max-width:520px;width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 12px 30px rgba(16,24,40,0.06)}
-.hero-copy h1{margin:0;font-size:2.25rem;font-family:Merriweather, Georgia, serif}
-.hero-copy .lead{color:var(--muted);margin-top:0.5rem;font-size:1.05rem}
+/* Intro */
+.intro{
+  max-width:65ch;
+  margin:2rem auto 3rem;
+  text-align:center;
+}
+
+.intro .lead{
+  font-size:1.25rem;
+  line-height:1.6;
+  color:var(--accent);
+  font-weight:300;
+  margin:0;
+}
 
 @media (max-width:800px){
   .hero .hero-inner{flex-direction:column}
