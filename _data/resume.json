@@ -1,0 +1,122 @@
+{
+  "name": "Scott Ryan",
+  "headline": "Solution Architect",
+  "summary": "Ideal role for me is one that puts the team in a position with clients where we can collaborate and whiteboard solutions to overcome their technical problems, designing and bringing to market solutions involving cloud platforms, storage, and GPU-accelerated workloads.",
+  "contact": {
+    "email": "s.ryan28@me.com",
+    "phone": "253.224.6403",
+    "location": "Phoenix, AZ",
+    "linkedin": "https://www.linkedin.com/in/scott-ryan"
+  },
+  "experience": [
+    {
+      "company": "Nutanix",
+      "title": "Solution Architect",
+      "range": "2021 – 2024",
+      "location": "AZ, NV, WA, OR, ID, AK",
+      "responsibilities": [
+        "Developed multiple territories through expert architecture of multi-cloud management, disaster recovery, data protection and business continuity.",
+        "Collected requirements and whiteboarded hyper-converged infrastructure and hypervisor-attached storage solutions.",
+        "Guided clients through optimizing GPU-accelerated workloads using NVIDIA AI Enterprise and DGX Cloud.",
+        "Transitioned a fast-growing city to modern modular infrastructure avoiding 3–5× renewal fees from previous cloud vendors.",
+        "Assisted universities and school districts with tuning, modernizing, and managing hybrid multi-cloud database workloads to reduce licensing and improve performance.",
+        "Implemented Kubernetes management and containerized development workflows to help development teams and control budgets.",
+        "Enabled universities to automate deployment, cost/chargeback control, and protection from ransomware/outages."
+      ]
+    },
+    {
+      "company": "Buurst",
+      "title": "Cloud Storage Solution Architect",
+      "range": "2020 – 2021",
+      "responsibilities": [
+        "Provided cloud storage strategy and GTM support for Fortune 500 and geographically distributed enterprise application teams.",
+        "Deployed edge data sites for Oil & Gas clients across APAC (Pacific and Indian Oceans).",
+        "Designed a cloud storage solution to support 80k concurrent video exam users for an Indian education client.",
+        "Worked with Product Management for SoftNAS and Edge to enable high-volume on-prem to cloud migrations, high-performance tiered storage, and data pipelines between edge and cloud."
+      ]
+    },
+    {
+      "company": "Continuous Technology",
+      "title": "Solution Architect Manager",
+      "range": "2016 – 2019",
+      "responsibilities": [
+        "Led pre-sales solution design and post-sales implementation.",
+        "Reduced clients' technology and communications budgets by ~25%.",
+        "Drove adoption of Azure, AWS, and Google Cloud services."
+      ]
+    },
+    {
+      "company": "TD Synnex - Signature Technology Group",
+      "title": "Solution Architect Director",
+      "range": "2012 – 2016",
+      "responsibilities": [
+        "Delivered demos, proposals, and proof of concepts for enterprise cloud migrations.",
+        "Developed technical sales materials and SKUs for services.",
+        "Migrated applications from corporate datacenters to AWS and Azure, reducing operating costs in some cases by ~90%."
+      ]
+    },
+    {
+      "company": "Xtreme Consulting (Microsoft V‑Dash)",
+      "title": "Partner Technology Specialist",
+      "range": "2008 – 2012",
+      "responsibilities": [
+        "Designed and delivered AWS & Azure cloud data and storage solutions.",
+        "Member of Microsoft Virtual Technology Solutions Partner (V‑TSP) team to create new business opportunities around Microsoft technologies."
+      ]
+    },
+    {
+      "company": "Intel Corporation",
+      "title": "Systems Engineer",
+      "range": "1997 – 2007",
+      "responsibilities": [
+        "Spearheaded cross-functional teams to deliver enterprise automation tools, boosting adoption by ~20% through strategic alliances.",
+        "Led product demonstrations and on-site support for factory automation solutions, saving over $500K in production costs.",
+        "Managed software/mechanical upgrades and earned Intel’s Enterprise Software Technology Award for product validation and solution implementation."
+      ]
+    }
+  ],
+  "certifications": [
+    "Microsoft Solution Architect - Expert",
+    "Nutanix Certified Professional – Multi-Cloud Infrastructure"
+  ],
+  "education": [
+    {
+      "institution": "Clark College",
+      "degree": "Computer Science"
+    },
+    {
+      "institution": "Arizona State University",
+      "degree": "Business / Accounting"
+    },
+    {
+      "institution": "Stanford University",
+      "degree": "Machine Learning (Certification)"
+    }
+  ],
+  "volunteer": [
+    "Kiwanis SW District – Division 10 Lt. Governor (Tempe, Casa Grande, Ahwatukee)",
+    "Kiwanis SW District (AZ, NM, El Paso) – Board of Directors",
+    "Boys and Girls Club of Guadalupe – Board Member",
+    "Kiwanis of Ahwatukee – President & Board Member"
+  ],
+  "core_skills": {
+    "cloud_platforms_virtualization": [
+      "AWS", "Microsoft Azure", "Google Cloud Platform (GCP)", "Oracle Cloud",
+      "VMware", "Hyper-V", "KVM", "XenServer", "Citrix Hypervisor", "Nutanix Acropolis",
+      "Docker", "Kubernetes", "CI/CD"
+    ],
+    "storage_networking": [
+      "SAN", "NAS", "iSCSI", "Fibre Channel", "network segmentation", "firewalls",
+      "HCI (storage, compute, networking integration)"
+    ],
+    "automation_scripting": [
+      "Python", "PowerShell", "Ansible", "Terraform", "Infrastructure as Code (IaC)"
+    ],
+    "ai_ml_hpc": [
+      "NVIDIA AI Enterprise", "DGX H100/A100", "DGX SuperPOD", "CUDA", "TensorRT",
+      "GPUDirect Storage", "InfiniBand", "RoCE", "GPUDirect RDMA",
+      "Lustre", "BeeGFS", "WEKA", "Spectrum Scale (GPFS)",
+      "PyTorch", "TensorFlow", "RAPIDS AI", "KubeFlow"
+    ]
+  }
+}
