@@ -129,3 +129,111 @@ body{
 .project-card strong{display:block;font-size:1.05rem}
 .project-card span{color:var(--muted);font-size:0.95rem}
 
+
+/* Resume Panel Styling */
+#panel-resume .section {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.resume-header {
+  border-bottom: 2px solid #eee;
+  margin-bottom: 1.5rem;
+}
+
+.resume-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.resume-header .subtitle {
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h3 {
+  font-size: 1.25rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.job h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.job .meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill {
+  background: #f3f6fa;
+  border-radius: 9999px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.loading, .error {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.resume-actions {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.resume-actions a, .resume-actions button {
+  background: #007acc;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.resume-actions a:hover, .resume-actions button:hover {
+  background: #005ea0;
+}
+
+/* Print view */
+@media print {
+  nav, header, footer, .tab-panel:not(#panel-resume), .resume-actions {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  #panel-resume .section {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+}
+}

@@ -17,22 +17,20 @@ Keep markup minimal and semantic. Use `{{ '/assets/data/resume.json' | relative_
 <!-- Resume -->
 <section id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" class="tab-panel" hidden>
   <div class="section">
-    <<div id="resume-root" aria-live="polite">
-  {% assign resume = site.data.resume %}
-  <h2>{{ resume.name }}</h2>
-  <p><strong>{{ resume.title }}</strong> — {{ resume.location }}</p>
-  <p>{{ resume.summary }}</p>
+    <div id="resume-root" aria-live="polite">
+      <p class="loading">Loading résumé...</p>
+    </div>
 
-  <h3>Experience</h3>
-  <ul>
-    {% for job in resume.experience %}
-    <li>
-      <strong>{{ job.title }}</strong> at {{ job.company }} ({{ job.start }}–{{ job.end }})<br>
-      <em>{{ job.location }}</em><br>
-      {{ job.description }}
-    </li>
-    {% endfor %}
-  </ul>
+    <p class="resume-actions">
+      <a id="download-json" href="{{ '/assets/data/resume.json' | relative_url }}" download>Download JSON</a>
+      <button id="print-resume" type="button">Print / Save PDF</button>
+    </p>
+  </div>
+
+  <noscript>
+    <p>JavaScript is required to view this résumé interactively. You can <a href="{{ '/assets/data/resume.json' | relative_url }}">download it here</a>.</p>
+  </noscript>
+</section>
 
   <h3>Skills</h3>
   <ul>
